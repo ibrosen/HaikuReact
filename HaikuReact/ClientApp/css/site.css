@@ -1,0 +1,36 @@
+.header {
+    width:100%;
+}
+
+
+header.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+}
+
+header.li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 33%;
+}
+
+    header.li NavLink {
+        
+    }
+
+        /* Change the link color to #111 (black) on hover */
+        header.li NavLink:hover {
+            background-color: #111;
+        }
+.main {
+    padding-left: 50px;
+    padding-right: 50px;
+}
