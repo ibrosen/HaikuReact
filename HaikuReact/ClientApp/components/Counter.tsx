@@ -5,6 +5,8 @@ interface CounterState {
     currentCount: number;
 }
 
+
+
 export class Counter extends React.Component<RouteComponentProps<{}>, CounterState> {
     constructor() {
         super();
@@ -19,7 +21,9 @@ export class Counter extends React.Component<RouteComponentProps<{}>, CounterSta
 
             <p>Current count: <strong>{ this.state.currentCount }</strong></p>
 
-            <button onClick={ () => { this.incrementCounter() } }>Increment</button>
+            <button onClick={() => { this.incrementCounter() }}>Increment</button>
+
+            <button onClick={() => { this.doStuff() }}>Increment</button>
         </div>;
     }
 
@@ -28,4 +32,31 @@ export class Counter extends React.Component<RouteComponentProps<{}>, CounterSta
             currentCount: this.state.currentCount + 1
         });
     }
+        
+    async doStuff()
+    {
+        var result = await DoSomethingWithItems("hmmm");
+        console.log(result);
+    }
+
+
+   
+
+
+    
+}
+
+
+
+async function DoSomethingWithItems(s: string) {
+
+    var myLine = "http://deathintombstone.ap-southeast-2.elasticbeanstalk.com/api/dbaccess" + "/initialisecharacter";
+    console.log(myLine);
+    var result = await fetch(myLine, {
+        method: 'GET',
+    });
+    var json = await result.json();
+    console.log(json)
+    return json;
+   
 }

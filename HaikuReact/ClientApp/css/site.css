@@ -4,7 +4,7 @@
     height : 100px;
 }
 .vl {
-    width: 2%;
+    width: 1%;
     background-color: #111;
     color: white;
     height: 50px;
@@ -33,7 +33,7 @@ header.ul {
 }
 
 .subDiv {
-    width: 49%;
+    width: 49.5%;
     background-color: antiquewhite;
     color: white;
     height: 50px;
@@ -86,3 +86,5 @@ header.li {
     padding-left: 50px;
     padding-right: 50px;
 }
+
+
