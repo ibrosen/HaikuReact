@@ -10,21 +10,22 @@ export class Header extends React.Component<{}, {}> {
                     
                     <div className='header'>
                         <div className='mainDiv'>
-                            <NavLink to={'/'} activeClassName='active' style={{ textDecoration: 'none' }}>
+                            <NavLink exact to={'/'} className='navCustom' activeClassName='navCustomActive' style={{ textDecoration: 'none' }}>
                                 <div className='innerDiv'> Haikus </div>
                             </NavLink> 
                         </div>
                         <div className='subDiv'>
-                            <NavLink to={'/counter'} activeClassName='active' style={{ textDecoration: 'none' }}>
+                            <NavLink exact to={'/counter'} className='navCustom' activeClassName='navCustomActive' style={{ textDecoration: 'none' }}>
                                 <div className='innerDiv'> Twitter </div>
                             </NavLink>
                         </div>
                         <div className='vl'></div>
-                        <div className='subDiv'>
-                            <NavLink to={'/fetchdata'} activeClassName='active' style={{ textDecoration: 'none' }}>
+                        <div className='subDiv' style={{ color: 'black' }}>
+                            <NavLink exact to={'/fetchdata'} className='navCustom' activeClassName='navCustomActive' style={{ textDecoration: 'none'}}>
                                 <div className='innerDiv'> Custom </div>
                             </NavLink>
                         </div>
+                        <div className='bottomLine'></div>
                     </div>
 
                 </div>
