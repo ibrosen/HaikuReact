@@ -4,26 +4,29 @@ import { Link, NavLink } from 'react-router-dom';
 export class Header extends React.Component<{}, {}> {
     public render() {
         return <div className='main-nav'>
-            <div className='navbar navbar-inverse'>
+            <div >
                 <div className='clearfix'></div>
-                <div className='navbar-collapse collapse header'>
-                    <ul className='nav navbar-nav'>
-                        <li>
-                            <NavLink to={'/'} exact activeClassName='active'>
-                                <span className='glyphicon glyphicon-home'></span> Home
-                            </NavLink>
-                        </li>
-                        <li>
+                <div>
+                    
+                    <div className='header'>
+                        <div className='mainDiv'>
+                            <NavLink to={'/'} activeClassName='active'>
+                                <div className='innerDiv'> Haikus </div>
+                            </NavLink> 
+                        </div>
+                        <div className='subDiv'>
                             <NavLink to={'/counter'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-education'></span> Counter
+                                <div className='innerDiv'> Twitter </div>
                             </NavLink>
-                        </li>
-                        <li>
+                        </div>
+                        <div className='vl'></div>
+                        <div className='subDiv'>
                             <NavLink to={'/fetchdata'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Fetch data
+                                <div className='innerDiv'> Custom </div>
                             </NavLink>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>;

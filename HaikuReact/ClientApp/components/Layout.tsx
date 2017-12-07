@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { NavMenu } from './NavMenu';
 import { Header } from './Header';
 
 export interface LayoutProps {
@@ -9,8 +8,8 @@ export interface LayoutProps {
 export class Layout extends React.Component<LayoutProps, {}> {
     public render() {
         return <div className='container-fluid'>
-            <div className='row'>
-                <div className='row-sm-3'>
+            <div>
+                <div >
                     <Header />
                 </div>
                 <div className='main'>
